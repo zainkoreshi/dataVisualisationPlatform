@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password to Account</title>
+    <title>DataVizPlatform</title>
     <style>
         * {
             margin: 0;
@@ -51,6 +51,14 @@
             color: white;
         }
 
+        .user-options {
+            padding: 0.5rem;
+            background-color: #B08B7D;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+
         .dropdown {
             position: relative;
             display: inline-block;
@@ -87,10 +95,21 @@
         }
 
         .dashboard-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 0;
+        }
+
+        .dashboard-header-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .dashboard-header h2 {
+            color: white;
+            margin: 0;
         }
 
         .create-btn {
@@ -103,6 +122,13 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        .dashboard-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 2rem;
         }
 
         .dashboard-card {
@@ -179,8 +205,9 @@
             <span>DataVizPlatform</span>
         </div>
         <div class="nav-right">
+            <div class="user-avatar">A</div>
             <div class="dropdown">
-                <div class="user-avatar">A</div>
+                <div class="user-options">User Options</div>
                 <div class="dropdown-content">
                     <a href="#">Reset Password</a>
                     <a href="#">Log Out</a>
@@ -191,40 +218,44 @@
 
     <main class="main-content">
         <div class="dashboard-header">
-            <h2>Dashboard List</h2>
-            <button class="create-btn">
-                <span>👤</span>
-                Create Dashboard
-            </button>
+            <div class="dashboard-header-content">
+                <h2>Dashboard List</h2>
+                <button class="create-btn">
+                    <span>+</span>
+                    Create Dashboard
+                </button>
+            </div>
         </div>
 
-        <div class="dashboard-card">
-            <div class="dashboard-title">
-                <h3>Your First Dashboard</h3>
-                <span>🗑️</span>
-            </div>
-            <div class="chart">
-                <div class="bar-group">
-                    <div class="bar" style="height: 40px;"></div>
-                    <div class="bar secondary" style="height: 30px;"></div>
+        <div class="dashboard-container">
+            <div class="dashboard-card">
+                <div class="dashboard-title">
+                    <h3>Your First Dashboard</h3>
+                    <span>🗑️</span>
                 </div>
-                <div class="bar-group">
-                    <div class="bar" style="height: 80px;"></div>
-                    <div class="bar secondary" style="height: 60px;"></div>
+                <div class="chart">
+                    <div class="bar-group">
+                        <div class="bar" style="height: 40px;"></div>
+                        <div class="bar secondary" style="height: 30px;"></div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height: 80px;"></div>
+                        <div class="bar secondary" style="height: 60px;"></div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar" style="height: 100px;"></div>
+                        <div class="bar secondary" style="height: 40px;"></div>
+                    </div>
                 </div>
-                <div class="bar-group">
-                    <div class="bar" style="height: 100px;"></div>
-                    <div class="bar secondary" style="height: 40px;"></div>
-                </div>
-            </div>
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="legend-color" style="background-color: #B08B7D;"></div>
-                    <span>Label 1</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background-color: #80CBC4;"></div>
-                    <span>Label 2</span>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #B08B7D;"></div>
+                        <span>Label 1</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #80CBC4;"></div>
+                        <span>Label 2</span>
+                    </div>
                 </div>
             </div>
         </div>
