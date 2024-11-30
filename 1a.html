@@ -59,11 +59,16 @@
             border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
+            text-align: center; /* Center text within the card */
         }
 
         .plan-card.featured {
             background-color: #8b6b61;
             color: white;
+        }
+
+        .plan-type, .price {
+            display: block; /* Ensure they are block elements */
         }
 
         .price {
@@ -75,11 +80,6 @@
         .price span {
             font-size: 1rem;
             opacity: 0.8;
-        }
-
-        .plan-type {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
         }
 
         .billing-info {
@@ -128,32 +128,32 @@
         }
 
         .plan-card.featured .get-started {
-            background: white;
-            color: #8b6b61;
-            border-color: white;
+            background: white; 
+            color: #8b6b61; 
+            border-color: white; 
         }
 
         .get-started:hover {
-            background: #8b6b61;
-            color: white;
-        }
-
-        .plan-card.featured .get-started:hover {
-            background: transparent;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .plans-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .plan-card {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
+           background:#8b6b61; 
+           color:white; 
+       }
+       
+       .plan-card.featured .get-started:hover { 
+           background:white; 
+           color:white; 
+       }
+       
+       @media (max-width:768px) { 
+           .plans-container { 
+               flex-direction:center; 
+               align-items:center; 
+           }
+           
+           .plan-card { 
+               width:center; 
+               max-width:center; 
+           } 
+       }
     </style>
 </head>
 <body>
@@ -186,22 +186,22 @@
                     <li>Export and Collaboration</li>
                 </ul>
                 <button class="get-started">Get Started</button>
-            </div>
+             </div>
 
-            <div class="plan-card">
-                <div class="plan-type">Annual Subscription</div>
-                <div class="price">HKD 160 <span>/month</span></div>
-                <div class="billing-info">Billed annually at a 10% discount</div>
-                <ul class="features">
-                    <li>Unlimited Dashboards</li>
-                    <li>Unlimited Visualisations</li>
-                    <li>Data Management</li>
-                    <li>Smart Analytics</li>
-                    <li>Export and Collaboration</li>
-                </ul>
-                <button class="get-started">Get Started</button>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+             <div class="plan-card">
+                 <div class="plan-type">Annual Subscription</div>
+                 <div class="price">HKD 160 <span>/month</span></div>
+                 <div class="billing-info">Billed annually at a 10% discount</div>
+                 <ul class="features">
+                     <li>Unlimited Dashboards</li>
+                     <li>Unlimited Visualisations</li>
+                     <li>Data Management</li>
+                     <li>Smart Analytics</li>
+                     <li>Export and Collaboration</li>
+                 </ul>
+                 <button class="get-started">Get Started</button>
+             </div>
+         </div>
+     </div>
+ </body>
+ </html>
